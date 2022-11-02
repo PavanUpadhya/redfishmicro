@@ -17,11 +17,13 @@ items:
       heritage: {{ .Release.Service | quote }}
       version: 1.0.0
     name: helloworld
+    namespace: {{ .Values.helloworld.namespace }}
   spec:
     ports:
     - name: http
       port: 80
       protocol: TCP
       targetPort: 80
+    type: NodePort
     selector:
       app: {{ template "fullname" . }}
