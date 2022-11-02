@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: List
 items:
-- apiVersion: extensions/v1beta1
+- apiVersion: apps/v1
   kind: Deployment
   metadata:
     labels:
@@ -12,6 +12,7 @@ items:
       heritage: {{ .Release.Service | quote }}
       version: {{ .Chart.Version }}
     name: helloworld
+    namespace: {{ .Values.helloworld.namespace }}
   spec:
     replicas: 1
     selector:
