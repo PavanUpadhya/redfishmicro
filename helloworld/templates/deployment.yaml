@@ -3,7 +3,7 @@ apiVersion: v1
 kind: List
 items:
 - apiVersion: apps/v1
-  kind: Deployment
+  kind: Deploymen
   metadata:
     labels:
       app: {{ template "fullname" . }}
