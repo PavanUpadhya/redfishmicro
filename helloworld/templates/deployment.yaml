@@ -14,7 +14,7 @@ items:
     name: helloworld
     namespace: {{ .Values.helloworld.namespace }}
   spec:
-    replicas: 1
+    replicas: 2
     selector:
       matchLabels:
         app: {{ template "fullname" . }}
